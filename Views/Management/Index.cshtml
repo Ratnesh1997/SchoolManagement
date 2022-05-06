@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SchoolManagement.Models.ImageUpload>
+
+<br />
+@*<div class="table-responsive">
+
+    <table class="table table-bordered">
+        <thead>
+
+        <th>Image</th>
+
+        </thead>
+
+        <tr>
+            <h1>   School Management System</h1>
+        </tr>
+
+        <tbody>
+
+            <tr class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a asp-action="DoctorDetails" asp-controller="Managements" class="btn-outline-danger">Admission</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Fees</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Student</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Teacher Portal </a>
+                </li>
+
+            </tr>*@
+
+@foreach (var item in Model)
+{@*<tr>
+            <td>@item.Name</td>
+            <td>@item.Contact</td>
+            <td>@item.Address</td>
+            <td><img src="@item.Image"  height="600" width="300"/></td>
+        </tr>*@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="@item.Image" alt="Card image cap" height="600" width="300"/>
+    <div class="card-body">
+        <p class="card-text">@item.Name</p><br />
+        <p class="card-text">@item.Contact</p><br />
+        <p class="card-text">@item.Name</p><br />
+    </div>
+</div>
+
+}
+@*</tbody>
+    </table>*@
+
+@*</div>*@
